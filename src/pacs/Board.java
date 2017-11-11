@@ -25,7 +25,7 @@ public class Board extends JPanel implements ActionListener{
     private final Font smallFont = new Font("Helvetica", Font.BOLD, 14);
 
     private Image ii;
-    private final Color dotColor = new Color(192, 192, 0);
+    private final Color dotColor = new Color(0,0,0);
     private Color mazeColor;
 
     private boolean inGame = false;
@@ -552,7 +552,7 @@ public class Board extends JPanel implements ActionListener{
 
         Graphics2D g2d = (Graphics2D) g;
 
-        g2d.setColor(Color.black);
+        g2d.setColor(Color.WHITE);
         g2d.fillRect(0, 0, d.width, d.height);
 
         drawMaze(g2d);
