@@ -1,9 +1,32 @@
 package pacs;
 
-public class Pacman {
+import java.awt.EventQueue;
+import javax.swing.JFrame;
 
+@SuppressWarnings("serial")
+public class Pacman  extends JFrame{
+
+	public Pacman() {
+        
+        initUI();
+    }
+    
+    private void initUI() {
+        
+        add(new Board());
+        
+        setTitle("Pacman");
+        setDefaultCloseOperation(EXIT_ON_CLOSE);
+        setSize(380, 420);
+        setLocationRelativeTo(null);
+        setVisible(true);        
+    }
+	
 	public static void main(String[] args) {
-		System.out.println("http://zetcode.com/tutorials/javagamestutorial/pacman/");
+		 EventQueue.invokeLater(() -> {
+	            Pacman ex = new Pacman();
+	            ex.setVisible(true);
+	     });
 	}
 
 }
