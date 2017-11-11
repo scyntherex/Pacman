@@ -1,3 +1,4 @@
+package pacs;
 
 public class Pacman {
 
